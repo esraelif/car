@@ -6,16 +6,16 @@ import TimeToLeaveIcon from '@mui/icons-material/TimeToLeave';
 function App() {
   const [carPosition, setCarPosition] = useState({ x: 250, y: 250 });
   const [carRotation, setCarRotation] = useState(0);
-  const [backgroundColor, setBackgroundColor] = useState('gray');
+  const [backgroundColor, setBackgroundColor] = useState('#a9a9a9');
 
   const handleUpClick = () => {
     setCarRotation(prevRotation => prevRotation + 180);
-    setBackgroundColor('green'); // Yukarı butonuna basıldığında arka plan rengini yeşil yap
+    setBackgroundColor('#00ffff'); // Yukarı butonuna basıldığında arka plan rengini yeşil yap
   };
 
   const handleDownClick = () => {
     setCarRotation(prevRotation => prevRotation - 180);
-    setBackgroundColor('purple'); // Aşağı butonuna basıldığında arka plan rengini mor yap
+    setBackgroundColor('#8a2be2'); // Aşağı butonuna basıldığında arka plan rengini mor yap
   };
 
   const handleKeyDown = (event) => {
@@ -23,11 +23,11 @@ function App() {
     switch (event.key) {
       case 'ArrowRight':
         setCarPosition(prevPosition => ({ ...prevPosition, x: prevPosition.x + moveDistance }));
-        setBackgroundColor('green'); // Sağa hareket ettiğinde arka plan rengini yeşil yap
+        setBackgroundColor('#8a2be2'); // Sağa hareket ettiğinde arka plan rengini yeşil yap
         break;
       case 'ArrowLeft':
         setCarPosition(prevPosition => ({ ...prevPosition, x: prevPosition.x - moveDistance }));
-        setBackgroundColor('green'); // Sola hareket ettiğinde arka plan rengini yeşil yap
+        setBackgroundColor('#8a2be2'); // Sola hareket ettiğinde arka plan rengini yeşil yap
         break;
       default:
         break;
